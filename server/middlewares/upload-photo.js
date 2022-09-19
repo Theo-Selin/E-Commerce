@@ -1,13 +1,14 @@
-const aws = require("aws-sdk");
+const { S3Client } = require("@aws-sdk/client-s3");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 
-aws.config.update({
-  secretAccessKey: process.env.AWSAccessKeyId,
-  accessKey: process.env.AWSSecretKey,
+const s3 = new S3Client({
+  region: "eu-north-1",
+  credentials: {
+    accessKeyId: process.env.AWSAccessKeyId,
+    secretAccessKey: process.env.AWSSecretKey
+  }
 });
-
-const s3 = new aws.S3();
 
 const upload = multer({
   storage: multerS3({
