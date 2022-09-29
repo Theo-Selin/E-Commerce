@@ -9,7 +9,7 @@
           </h1>
           <div class="a-spacing-large"></div>
           <!--- Button --->
-          <a href="#" class="a-button-buy-again margin-right-10"
+          <a href="/product" class="a-button-buy-again margin-right-10"
             >Add a new product</a
           >
           <a href="#" class="a-button-history margin-left-10"
@@ -27,7 +27,11 @@
 
     <div class="container-fluid browsing-history">
       <div class="row">
-        <div v-for="(product) in products" :key="product._id" class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 br bb">
+        <div
+          v-for="product in products"
+          :key="product._id"
+          class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 br bb"
+        >
           <div class="history-box">
             <!--- Product image --->
             <a href="#" class="a-link-normal">
@@ -60,7 +64,7 @@
             <div class="a-row">
               <div class="a-row">
                 <span class="a-size-base a-color-price">
-                  <span class="p13n-sc-price">{{ product.price }}</span>
+                  <span class="p13n-sc-price">{{ product.price + "$" }}</span>
                 </span>
               </div>
 
@@ -81,17 +85,13 @@
 export default {
   // asyncData is fetching data before the page is loaded, SEO (Search Engine Optimization)
   async asyncData({ $axios }) {
-  try {
-    let response = await $axios.$get("http://localhost:8000/api/products")
-    console.log(response)
-    return {
-      products: response.products
-    }
-
-  } catch (error) {
-
-  }
-}
+    try {
+      let response = await $axios.$get("http://localhost:8000/api/products");
+      console.log(response);
+      return {
+        products: response.products,
+      };
+    } catch (error) {}
+  },
 };
-
 </script>

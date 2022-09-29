@@ -7,6 +7,9 @@ const upload = require("../middlewares/upload-photo");
 router.post("/products", upload.single("photo"), async (req, res) => {
   try {
     let product = new Product();
+    product.ownerID = req.body.ownerID;
+    product.categoryID = req.body.categoryID;
+    product.price = req.body.price;
     product.title = req.body.title;
     product.description = req.body.description;
     product.photo = req.file.location;
@@ -91,13 +94,13 @@ router.put("/products/:id", upload.single("photo"), async (req, res) => {
 // DELETE request - deletes a single product
 router.delete("/products/:id", async (req, res) => {
   try {
-    let deletedProduct = await Product.findOneAndDelete({ _id: req.params.id })
+    let deletedProduct = await Product.findOneAndDelete({ _id: req.params.id });
 
     if (deletedProduct) {
       res.json({
         status: true,
-        message: "Successfully deleted product"
-      })
+        message: "Successfully deleted product",
+      });
     }
   } catch (error) {
     res.status(500).json({
