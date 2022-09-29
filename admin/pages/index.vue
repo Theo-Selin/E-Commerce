@@ -28,7 +28,7 @@
     <div class="container-fluid browsing-history">
       <div class="row">
         <div
-          v-for="product in products"
+          v-for="(product, index) in products"
           :key="product._id"
           class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 br bb"
         >
@@ -78,6 +78,7 @@
                 <a
                   :to="`/products/${product._id}`"
                   class="a-button-history margin-right-10"
+                  @click="onDeleteProduct(product._id, index)"
                   >Delete</a
                 >
               </div>
@@ -100,6 +101,21 @@ export default {
         products: response.products,
       };
     } catch (error) {}
+  },
+  methods: {
+    async onDeleteProduct(id, index) {
+      try {
+        let response = await this.$axios.$delete(
+          `http://localhost:8000/api/products/${id}`
+        );
+
+        if (response.status) {
+          this.products.splice(index, 1);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>
