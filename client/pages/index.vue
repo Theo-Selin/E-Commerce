@@ -1,20 +1,34 @@
 <template>
   <div>
     <Navbar />
-    <nuxt-link to="/products" class="a-button-buy-again"
-      >Add a new product</nuxt-link
-    >
+    <main class="listingPage">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-2 col-lg-3 md-4 col-sm-4">
+            <!--- Sidebar --->
+          </div>
+
+          <!--- Main Content --->
+          <div class="col-xl-10 col-lg-9 md-8 col-sm-8">
+            <FeaturedProduct />
+          </div>
+        </div>
+      </div>
+    </main>
     <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "~/components/Navbar";
-import Footer from "~/components/Footer.vue";
+import Footer from "~/components/Footer";
+import FeaturedProduct from "~/components/FeaturedProduct";
+
 export default {
   components: {
     Navbar,
     Footer,
+    FeaturedProduct,
   },
 };
 </script>
