@@ -12,10 +12,10 @@
           <a href="/product" class="a-button-buy-again margin-right-10"
             >Add a new product</a
           >
-          <a href="#" class="a-button-history margin-left-10"
+          <a href="/category" class="a-button-history margin-left-10"
             >Add a new category</a
           >
-          <a href="#" class="a-button-history margin-right-10"
+          <a href="/owner" class="a-button-history margin-right-10"
             >Add a new owner</a
           >
           <!--- Listing page --->
