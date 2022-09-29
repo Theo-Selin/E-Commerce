@@ -36,9 +36,7 @@
             <div class="a-spacing-top-large">
               <span class="a-button-register">
                 <span class="a-button-inner">
-                  <span class="a-button-text" @click="onAddOwner"
-                    >Add owner</span
-                  >
+                  <span class="a-button-text" @click="onAddOwner">Add</span>
                 </span>
               </span>
             </div>
