@@ -9,13 +9,13 @@
           </h1>
           <div class="a-spacing-large"></div>
           <!--- Button --->
-          <a href="/product" class="a-button-buy-again margin-right-10"
+          <a href="/products" class="a-button-buy-again margin-right-10"
             >Add a new product</a
           >
-          <a href="/category" class="a-button-history margin-left-10"
+          <a href="/" class="a-button-history margin-left-10"
             >Add a new category</a
           >
-          <a href="/owner" class="a-button-history margin-right-10"
+          <a href="/" class="a-button-history margin-right-10"
             >Add a new owner</a
           >
           <!--- Listing page --->
