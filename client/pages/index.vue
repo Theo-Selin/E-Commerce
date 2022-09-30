@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <main class="listingPage">
       <div class="container-fluid">
         <div class="row">
@@ -141,19 +140,14 @@
         </div>
       </div>
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from "~/components/Navbar";
-import Footer from "~/components/Footer";
 import FeaturedProduct from "~/components/FeaturedProduct";
 
 export default {
   components: {
-    Navbar,
-    Footer,
     FeaturedProduct,
   },
   async asyncData({ $axios }) {
@@ -169,3 +163,11 @@ export default {
   },
 };
 </script>
+
+<style>
+body {
+  font-size: 13px;
+  line-height: 19px;
+  color: #111;
+}
+</style>
