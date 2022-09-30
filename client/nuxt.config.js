@@ -72,7 +72,7 @@ export default {
       local: {
         endpoints: {
           login: {
-            propertyName: "token",
+            property: "token",
           },
           logout: true,
         },
