@@ -342,6 +342,41 @@
             </div>
           </div>
         </div>
+        <br />
+        <hr />
+        <div class="books-entity-teaser">
+          <div class="bucket">
+            <h2>More about the author</h2>
+            <div class="content">
+              <div class="row">
+                <!--- Author's photo and button --->
+                <div class="col-md-2 -col-sm-4 col-4">
+                  <div class="authorContent">
+                    <div class="authorImageSingle">
+                      <a href="#">
+                        <img src="/img/featuredImage.jpg" class="img-fluid" />
+                      </a>
+                    </div>
+                    <div class="authorFollow">
+                      <button class="followButton" type="button">
+                        <span class="pr-fb-icon"></span>
+                        <span class="pr-fb-text">Follow</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!--- Author's about --->
+                <div class="col-md-10 col-sm-8 col-8 pl.0">
+                  <div class="mainContent">
+                    <h3>Biography</h3>
+                    <div id="authorBio">My name is Walter White</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
