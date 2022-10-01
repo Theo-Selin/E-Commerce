@@ -94,6 +94,8 @@
 
 <script>
 export default {
+  middleware: "auth",
+  auth: "guest",
   layout: "none",
   data() {
     return {

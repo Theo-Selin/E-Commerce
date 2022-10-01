@@ -81,6 +81,8 @@
 
 <script>
 export default {
+  middleware: "auth",
+  auth: "guest",
   layout: "none",
   data() {
     return {
@@ -92,17 +94,15 @@ export default {
   methods: {
     async onLogin() {
       try {
-        if (response.success) {
-          this.$auth.loginWith("local", {
-            data: {
-              email: this.email,
-              password: this.password,
-            },
-          });
+        this.$auth.loginWith("local", {
+          data: {
+            email: this.email,
+            password: this.password,
+          },
+        });
 
-          this.$router.push("/");
-          console.log(data);
-        }
+        this.$router.push("/");
+        console.log(data);
       } catch (error) {
         console.log(error);
       }

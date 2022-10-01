@@ -44,6 +44,8 @@ export default {
     "@nuxtjs/pwa",
     // Nuxt authentication
     "@nuxtjs/auth",
+    // Nuxt proxy
+    "@nuxtjs/proxy",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -72,7 +74,7 @@ export default {
       local: {
         endpoints: {
           login: {
-            property: "token",
+            propertyName: "token",
           },
           logout: true,
         },
