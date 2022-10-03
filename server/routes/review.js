@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const Review = require("../models/product");
-const Product = require("../models/review");
+const Review = require("../models/review");
+const Product = require("../models/product");
 const verifyToken = require("../middlewares/verify-token");
 const upload = require("../middlewares/upload-photo");
 
@@ -9,10 +9,10 @@ router.post(
   [verifyToken, upload.single("photo")],
   async (req, res) => {
     try {
-      const review = new review();
+      const review = new Review();
       review.headline = req.body.headline;
       review.body = req.body.body;
-      review.ratings = reg.body.rating;
+      review.rating = req.body.rating;
       review.photo = req.file.location;
       review.user = req.decoded._id;
       review.productID = req.params.productID;
