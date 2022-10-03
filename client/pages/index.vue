@@ -56,7 +56,7 @@
                           </div>
 
                           <!--- Author's name --->
-                          <div class="a-row a-spacing-small">
+                          <!-- <div class="a-row a-spacing-small">
                             <span class="a-size-small a-color-secondary"
                               >by</span
                             >
@@ -65,7 +65,7 @@
                                 product.owner.name
                               }}</a>
                             </span>
-                          </div>
+                          </div> -->
 
                           <!--- Shipment --->
                           <div class="a-row">
