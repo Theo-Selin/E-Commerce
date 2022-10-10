@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col-xl-2 col-lg-3 md-4 col-sm-4">
             <!--- Sidebar --->
+            Create easy access to different categories
           </div>
 
           <!--- Main Content --->
@@ -59,7 +60,7 @@
                           </div>
 
                           <!--- Author's name --->
-                          <!-- <div class="a-row a-spacing-small">
+                          <div class="a-row a-spacing-small">
                             <span class="a-size-small a-color-secondary"
                               >by</span
                             >
@@ -68,7 +69,7 @@
                                 product.owner.name
                               }}</a>
                             </span>
-                          </div> -->
+                          </div>
 
                           <!--- Shipment --->
                           <div class="a-row">

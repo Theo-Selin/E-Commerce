@@ -57,16 +57,16 @@
                           </div>
 
                           <!--- Author's name --->
-                          <!-- <div class="a-row a-spacing-small">
-                              <span class="a-size-small a-color-secondary"
-                                >by</span
-                              >
-                              <span class="a-size-small a-color-secondary">
-                                <a class="a-link-normal a-text-normal" href="#">{{
-                                  product.owner.name
-                                }}</a>
-                              </span>
-                            </div> -->
+                          <div class="a-row a-spacing-small">
+                            <span class="a-size-small a-color-secondary"
+                              >by</span
+                            >
+                            <span class="a-size-small a-color-secondary">
+                              <a class="a-link-normal a-text-normal" href="#">{{
+                                product.owner.name
+                              }}</a>
+                            </span>
+                          </div>
 
                           <!--- Shipment --->
                           <div class="a-row">

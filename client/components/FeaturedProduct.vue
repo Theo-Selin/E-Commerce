@@ -1,7 +1,7 @@
 <template>
   <div class="mainContent">
     <div class="unified_widget pageBanner">
-      <h1>Books</h1>
+      <h1>News</h1>
 
       <p>
         <b>
