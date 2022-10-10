@@ -29,9 +29,15 @@
                   <span class="nav-line-1" id="glow-ingress-line1"
                     >Deliver to</span
                   >
-                  <span class="nav-line-2" id="glow-ingress-line2">{{
-                    $auth.$state.user.address.city
-                  }}</span>
+                  <span
+                    class="nav-line-2"
+                    id="glow-ingress-line2"
+                    v-if="$auth.$state.loggedIn"
+                    >{{ $auth.$state.user.address.city }}</span
+                  >
+                  <span class="nav-line-2" id="glow-ingress-line2" v-else
+                    >The whole world</span
+                  >
                 </div>
               </nuxt-link>
             </div>
